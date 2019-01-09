@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '8.0'
+
+target 'MasterModuleLogin_Example' do
+  pod 'MasterModuleLogin', :path => '../'
+
+  target 'MasterModuleLogin_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

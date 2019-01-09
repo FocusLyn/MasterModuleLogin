@@ -1,0 +1,6 @@
+framework module MasterModuleLogin {
+  umbrella header "MasterModuleLogin-umbrella.h"
+
+  export *
+  module * { export * }
+}

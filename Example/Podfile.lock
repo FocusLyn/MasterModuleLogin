@@ -1,0 +1,16 @@
+PODS:
+  - MasterModuleLogin (0.1.0)
+
+DEPENDENCIES:
+  - MasterModuleLogin (from `../`)
+
+EXTERNAL SOURCES:
+  MasterModuleLogin:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  MasterModuleLogin: ade8bfdaf72a4f2d019629c8310015acb1f03257
+
+PODFILE CHECKSUM: 2407debdf427e43f127582506f2d21af28b54c0c
+
+COCOAPODS: 1.5.3

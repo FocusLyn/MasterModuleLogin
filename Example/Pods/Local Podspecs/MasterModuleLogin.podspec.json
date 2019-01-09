@@ -1,0 +1,22 @@
+{
+  "name": "MasterModuleLogin",
+  "version": "0.1.0",
+  "summary": "A short description of MasterModuleLogin.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/FocusLyn/MasterModuleLogin",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "FocusLyn": "linjiangfeng@basestonedata.com"
+  },
+  "source": {
+    "git": "https://github.com/FocusLyn/MasterModuleLogin.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "MasterModuleLogin/Classes/**/*"
+}
