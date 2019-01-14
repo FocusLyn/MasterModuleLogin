@@ -37,7 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		001DAC3F247B5CD1F8FCEC07 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		001DAC3F247B5CD1F8FCEC07 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		2B9094D255C77A27D41940BF /* Pods_MasterModuleLogin_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MasterModuleLogin_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E3C83CDC0925FF4CBDF80F5 /* Pods-MasterModuleLogin_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MasterModuleLogin_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-MasterModuleLogin_Example/Pods-MasterModuleLogin_Example.release.xcconfig"; sourceTree = "<group>"; };
 		38BE1C63583EADDAEB3C5A9E /* Pods-MasterModuleLogin_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MasterModuleLogin_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MasterModuleLogin_Example/Pods-MasterModuleLogin_Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -60,13 +60,13 @@
 		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
-		714FC7FB4011B51BFFB8311A /* MasterModuleLogin.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = MasterModuleLogin.podspec; path = ../MasterModuleLogin.podspec; sourceTree = "<group>"; };
+		714FC7FB4011B51BFFB8311A /* MasterModuleLogin.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = MasterModuleLogin.podspec; path = ../MasterModuleLogin.podspec; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7BCD47EAEDE2A9E4FD39AF8F /* Pods-MasterModuleLogin_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MasterModuleLogin_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MasterModuleLogin_Tests/Pods-MasterModuleLogin_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		88F73B20DBA8BE1F02127671 /* Pods_MasterModuleLogin_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MasterModuleLogin_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EE56CEB8659C2CA0D2C56A2 /* Pods-MasterModuleLogin_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MasterModuleLogin_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MasterModuleLogin_Tests/Pods-MasterModuleLogin_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		C4CE60B104B1E12AA687D40A /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		C4CE60B104B1E12AA687D40A /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -347,12 +347,16 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-MasterModuleLogin_Example/Pods-MasterModuleLogin_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 				"${BUILT_PRODUCTS_DIR}/MasterModuleLogin/MasterModuleLogin.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MasterModuleLogin.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -454,6 +458,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				ONLY_ACTIVE_ARCH = YES;
+				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -486,6 +491,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -503,6 +509,7 @@
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = NO;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -518,6 +525,7 @@
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = NO;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

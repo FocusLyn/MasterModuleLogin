@@ -24,13 +24,14 @@ TODO: Add long description of the pod here.
   s.homepage         = 'https://github.com/FocusLyn/MasterModuleLogin'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'FocusLyn' => 'linjiangfeng@basestonedata.com' }
+  s.author           = { 'FocusLyn' => 'nsstring@foxmail.com' }
   s.source           = { :git => 'https://github.com/FocusLyn/MasterModuleLogin.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
+  s.default_subspecs = 'Classes'
 
-  s.source_files = 'MasterModuleLogin/Classes/**/*'
+#  s.source_files = 'MasterModuleLogin/Classes/**/*'
   
   # s.resource_bundles = {
   #   'MasterModuleLogin' => ['MasterModuleLogin/Assets/*.png']
@@ -39,4 +40,31 @@ TODO: Add long description of the pod here.
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
+  
+  s.subspec 'Classes' do |sp|
+      
+      #Net
+      sp.subspec 'Net' do |ssp|
+          ssp.source_files = 'MasterModuleLogin/Classes/Net/*.{h,m}'
+          ssp.frameworks = 'UIKit', 'Security','CoreFoundation'
+          ssp.dependency 'AFNetworking'
+      end
+      
+      #View
+      sp.subspec 'View' do |ssp|
+          ssp.source_files = 'MasterModuleLogin/Classes/View/*.{h,m}'
+          ssp.frameworks = 'UIKit'
+          ssp.dependency 'Masonry'
+      end
+      
+      #ViewController
+      sp.subspec 'ViewController' do |ssp|
+          ssp.source_files = 'MasterModuleLogin/Classes/ViewController/*.{h,m}'
+          ssp.frameworks = 'UIKit', 'Security','CoreFoundation'
+          ssp.dependency 'Masonry'
+          ssp.dependency 'MasterModuleLogin/Classes/Net'
+          ssp.dependency 'MasterModuleLogin/Classes/View'
+      end
+  end
+  
 end

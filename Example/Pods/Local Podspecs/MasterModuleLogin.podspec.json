@@ -9,7 +9,7 @@
     "file": "LICENSE"
   },
   "authors": {
-    "FocusLyn": "linjiangfeng@basestonedata.com"
+    "FocusLyn": "nsstring@foxmail.com"
   },
   "source": {
     "git": "https://github.com/FocusLyn/MasterModuleLogin.git",
@@ -18,5 +18,56 @@
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "MasterModuleLogin/Classes/**/*"
+  "default_subspecs": "Classes",
+  "subspecs": [
+    {
+      "name": "Classes",
+      "subspecs": [
+        {
+          "name": "Net",
+          "source_files": "MasterModuleLogin/Classes/Net/*.{h,m}",
+          "frameworks": [
+            "UIKit",
+            "Security",
+            "CoreFoundation"
+          ],
+          "dependencies": {
+            "AFNetworking": [
+
+            ]
+          }
+        },
+        {
+          "name": "View",
+          "source_files": "MasterModuleLogin/Classes/View/*.{h,m}",
+          "frameworks": "UIKit",
+          "dependencies": {
+            "Masonry": [
+
+            ]
+          }
+        },
+        {
+          "name": "ViewController",
+          "source_files": "MasterModuleLogin/Classes/ViewController/*.{h,m}",
+          "frameworks": [
+            "UIKit",
+            "Security",
+            "CoreFoundation"
+          ],
+          "dependencies": {
+            "Masonry": [
+
+            ],
+            "MasterModuleLogin/Classes/Net": [
+
+            ],
+            "MasterModuleLogin/Classes/View": [
+
+            ]
+          }
+        }
+      ]
+    }
+  ]
 }

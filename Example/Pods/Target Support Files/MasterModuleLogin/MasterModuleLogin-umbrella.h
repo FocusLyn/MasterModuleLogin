@@ -10,6 +10,9 @@
 #endif
 #endif
 
+#import "LoginBaseRequest.h"
+#import "LoginTextField.h"
+#import "LoginViewController.h"
 
 FOUNDATION_EXPORT double MasterModuleLoginVersionNumber;
 FOUNDATION_EXPORT const unsigned char MasterModuleLoginVersionString[];

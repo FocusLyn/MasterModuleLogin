@@ -7,12 +7,23 @@
 //
 
 #import "MasterAppDelegate.h"
+#import "MasterViewController.h"
 
 @implementation MasterAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    // 初始化程序窗口
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.backgroundColor = [UIColor clearColor];
+    [self.window makeKeyAndVisible];
+    
+    // 设置状态栏
+    [UIApplication sharedApplication].statusBarHidden = NO;
+    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
+    
+    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[[MasterViewController alloc] init]];
+    
     return YES;
 }
 
